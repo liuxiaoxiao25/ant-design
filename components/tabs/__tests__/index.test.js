@@ -3,6 +3,7 @@ import { mount, render } from 'enzyme';
 import Tabs from '..';
 import mountTest from '../../../tests/shared/mountTest';
 import rtlTest from '../../../tests/shared/rtlTest';
+import { wrap } from 'lodash';
 
 const { TabPane } = Tabs;
 
@@ -84,5 +85,12 @@ describe('Tabs', () => {
       'Warning: [antd: Tabs] `onPrevClick` and `onNextClick` has been removed. Please use `onTabScroll` instead.',
     );
     errorSpy.mockRestore();
+  });
+
+  it('tabBarGutter should work', () => {
+    const wrapper = mount(<Tabs tabBarGutter={0}><TabPane /><TabPane /><TabPane /></Tabs>);
+    expect(wrapper).toMatchRenderedSnapshot();
+    const wrapper2 = mount(<Tabs tabBarGutter={0} tabPosition="left"><TabPane /><TabPane /><TabPane /></Tabs>);
+    expect(wrapper2).toMatchRenderedSnapshot();
   });
 });
