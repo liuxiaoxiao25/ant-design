@@ -44,7 +44,7 @@ ReactDOM.render(
         <span role="img" aria-label="USA">
           🇺🇸
         </span>
-        USA (美国)
+        V10账号
       </div>
     </Option>
     <Option value="japan" label="Japan">
@@ -52,7 +52,7 @@ ReactDOM.render(
         <span role="img" aria-label="Japan">
           🇯🇵
         </span>
-        Japan (日本)
+        精品皮肤号
       </div>
     </Option>
     <Option value="korea" label="Korea">
@@ -60,7 +60,7 @@ ReactDOM.render(
         <span role="img" aria-label="Korea">
           🇰🇷
         </span>
-        Korea (韩国)
+        荣耀王者号
       </div>
     </Option>
   </Select>,
